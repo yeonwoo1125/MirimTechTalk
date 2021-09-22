@@ -1,0 +1,23 @@
+{
+  "name": "mirimtechtalk",
+  "version": "1.0.0",
+  "description": "MirimTechTalk",
+  "main": "app.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yeonwoo1125/MirimTechTalk.git"
+  },
+  "author": "\"\"",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yeonwoo1125/MirimTechTalk/issues"
+  },
+  "homepage": "https://github.com/yeonwoo1125/MirimTechTalk#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mysql": "^2.18.1"
+  }
+}
