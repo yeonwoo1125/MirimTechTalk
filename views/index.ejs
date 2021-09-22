@@ -8,8 +8,8 @@
     </head>
     <body>
         <% if(locals.data){ %>
-            <% for(let i=0;i<data.length;i++){ %>
-                title : <%= data[i].title %>, description : <%= data[i].description %><br>
+            <% for(let i=0; i<data.length; i++){ %>
+                id : <%= data[i].id %>, title : <%= data[i].title %>, description : <%= data[i].description %><br>
             <% } %>
         <% } %>
     </body>
