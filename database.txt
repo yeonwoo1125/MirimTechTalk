@@ -3,3 +3,8 @@ table : users
 
 title : text not null
 description : varchar(50)
+
+
+insert
+get(/boards) : index.ejs //데이터 보여줌
+ post(/boards) : add.ejs //데이터 추가
