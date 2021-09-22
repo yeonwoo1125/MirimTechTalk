@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Mirim Tech Talk
+        </title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <% if(locals.data){ %>
+            <% for(let i=0;i<data.length;i++){ %>
+                title : <%= data[i].title %>, description : <%= data[i].description %><br>
+            <% } %>
+        <% } %>
+    </body>
+</html>

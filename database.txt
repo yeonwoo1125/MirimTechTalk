@@ -1,0 +1,6 @@
+database : MirimTechTalk
+table : users
+
+id : int not null, primary key
+title : text not null
+description : varchar(50)
