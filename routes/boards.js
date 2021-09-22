@@ -15,7 +15,6 @@ const table = mysql.createConnection({
 });
 
 //POST /boards 라우터
-
 router.get('/',(req, res)=>{
     table.query("SELECT * FROM users",(err, result, fields)=>{
         usersRes = JSON.parse(JSON.stringify(result));
