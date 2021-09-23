@@ -7,7 +7,11 @@
         <meta charset="utf-8">
     </head>
     <body>
-
+        <% if(locals.data){ %>
+            <% for(let i=0; i<data.length; i++){ %>
+                id : <%= data[i].id %>, title : <%= data[i].title %>, description : <%= data[i].description %><br>
+            <% } %>
+        <% } %>
         <button><a href="/boards">Data Insert</a></button>
     </body>
 </html>

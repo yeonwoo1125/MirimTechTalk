@@ -6,31 +6,19 @@ const ejs = require('ejs');
 const router = express.Router();
 const mainPage = fs.readFileSync('./views/index.ejs', 'utf8');
 
-
 const table = mysql.createConnection({
     host : 'localhost',
     user : 'root',
     password : 'yeanwoo0619',
     database : 'mirimtechtalk'
 });
-
 //POST /boards 라우터
 router.get('/',function(req, res){
-    table.query("SELECT * FROM users",(err, result, fields)=>{
-        //usersRes = JSON.parse(JSON.stringify(result));
+    var page = ejs.render(mainPage, {
+        title: "Title",
 
-        if(err){
-            console.log(err);
-            res.status(500).send("Internal Server Error");
-        }
-        else {
-            var page = ejs.render(mainPage, {
-                title: "Title",
-                data: result,
-            });
-            res.send(page);
-        }
     });
+    res.send(page);
 });
 
 router.post('/',(req, res)=>{ //데이터 추가하는 페이지 불러옴
@@ -45,9 +33,7 @@ router.post('/',(req, res)=>{ //데이터 추가하는 페이지 불러옴
             res.status(500).send("Internal Server Error");
         }
         else {
-
             res.send("data inserted");  
-            
         }
     })
 })

@@ -13,11 +13,7 @@
             <p><textarea name="description" placeholder="description"></textarea></p>
             <p><input type="submit"></p>
         </form>
-        <% if(locals.data){ %>
-            <% for(let i=0; i<data.length; i++){ %>
-                id : <%= data[i].id %>, title : <%= data[i].title %>, description : <%= data[i].description %><br>
-            <% } %>
-        <% } %>
+        <button><a href="/">Main</a></button>
         
     </body>
 </html>
